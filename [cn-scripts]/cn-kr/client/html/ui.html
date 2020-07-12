@@ -1,0 +1,70 @@
+<head>
+	<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="scripts.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="styles.css" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<div id="kr">
+	<!-- <center><img id="logo" src="logo.png" alt="Logo"></center> --><br><br>
+	<div class="login-page">
+  <div class="form">
+    <form class="login-form">
+			<input type="text" id="inputEfterlysning" name="inputEfterlysning" placeholder="Søg efter CPR">
+			<button type="button" class="bntEfterlysning" name="button">Søg</button>
+			<button type="button" class="btnClose" name="button">Luk</button>
+    </form>
+		
+  </div>
+</div>
+
+
+
+
+	<div class="row">
+  <div class="column" style="background-color:white;">
+    <h2>Efterlysninger</h2>
+    <div id="efterlysninger">
+			Søg efter et CPR nummer for at se efterlysninger
+		</div>
+  </div>
+  <div class="column" style="background-color:white;">
+    <h2>Personregister</h2>
+		<div id="personregister">
+			Søg efter et CPR nummer for at se personregisteret
+		</div>
+		<div class="driverlicense">
+				<input type="text" id="user_id" style="display:none" placeholder="Søg efter CPR">
+				<button type="button" class="btnFrakend" id="btnFrakend" style="display:none" name="button">Frakend kørekort</button>
+
+				<!-- System til at tildele bøde -->
+				<button type="button" class="btnBode" id="btnBode" style="display:none" name="button">Skriv rapport</button>
+				<div id="kr_sagsbehandler"></div>
+				<div id="kr_medvirkende"></div>
+				<div id="kr_rapport"></div>
+				<button type="button" class="btnOpretBode" id="btnOpretBode" style="display:none" name="button">Opret rapport</button>
+
+				<!-- System til at give klip i kortet --><br><br>
+				<button type="button" class="btnKlip" id="btnKlip" style="display:none" name="button">Tildel 1 klip</button>
+				<div id="kr_klip"></div>
+		</div>
+  </div>
+
+  <div class="column" style="background-color:white;">
+    <h2>Køretøjer</h2>
+		<div id="koretojer">
+			Søg efter et CPR nummer for at se køretøjer
+		</div>
+  </div>
+  <div class="column" style="background-color:white;">
+    <h2>Bøder</h2>
+		<div id="boder">
+			Søg efter et CPR nummer for at se bøder
+		</div>
+  </div>
+</div>
+
+</div>
+</body>

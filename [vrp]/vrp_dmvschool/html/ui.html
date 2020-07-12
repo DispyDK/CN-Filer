@@ -1,0 +1,102 @@
+<head>
+	<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+	<script src="questions.js" type="text/javascript"></script>
+	<script src="scripts.js" type="text/javascript"></script>
+	<script src="debounce.min.js" type="text/javascript"></script>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+
+<body>
+	<img id="cursor" src="cursor.png">
+	<div class="full-screen">
+		<div class="question-container">
+			<!-- header -->
+			<div class="header">
+				<h1>Institut for Motorkøretøjer</h1>
+			</div>
+			<!-- home -->
+			<div class="body home">
+				<div class="content">
+					<!-- ICI BREVE PRESENTATION -->
+					<center><img src="dmv.png" class="logo"><br><p class="bold-text">Velkommen til Køreskolen</center>
+					<br><center>Vi kræver, at alle vores borgere skal gennemgå en teoriprøve, før de får et gyldigt kørekort. <br> Tag din tid og svar med fælles sans, tag ikke heldige gæt.<br><br></center>
+					Teori test<br>
+					- Den skriftlige test koster 5000 kroner, der er ingen tilbagebetalinger, hvis du fejler. <br>
+					- Bare rolig, køreskolen vil tillade lån, pas på ikke at falde i stor gæld! <br>
+					- Hvis du fejler testen en gang, kan du ikke tage det igen med det samme, kom tilbage en anden dag og prøv igen. <br> <br>
+					Kørselstest <br>
+					- Kørselstesten koster 5000 kroner, som tidligere, refunderes denne betaling ikke, hvis du fejler testen. <br>
+					- Hovedformålet med kørslen er opmærksomheden på detaljer, vær opmærksom på omgivelserne og ikke kollidere!</p>
+				</div>
+				<div class="buttonspot">
+				<a href="#" class="button btnQuestion">Begynd</a>
+				</div>
+				<div class ="barre-progression" >
+					<h2>Fremskridt</h2>
+					<progress class="progression" value="0" max="10" >
+				</div>
+			</div>
+			<!-- Question-->
+			<div class="body questionnaire-container">
+				<div class="content">
+					<h2 id="questionNumero"></h2>
+					<p id="question"></p>
+					<form class="form" id="question-form">
+						<div>
+							<input type="radio" name="question" id="answerA" value="A">
+							<label class="answerA" for="answerA"></label>
+						</div>
+						<div>
+							<input type="radio" name="question" id="answerB" value="B">
+							<label class="answerB" for="answerB"></label>
+						</div>
+						<div>
+							<input type="radio" name="question" id="answerC" value="C">
+							<label class="answerC" for="answerC"></label>
+						</div>		
+						<div>
+							<input type="radio" name="question" id="answerD" value="D">
+							<label class="answerD" for="answerD"></label>
+						</div>
+	              		<button type="submit" id="submit" class="submit">Næste Spørgsmål</button>
+						<div><span id="question-error"></span></div>
+					</form>
+				</div>
+				<div class ="barre-progression">
+					<h2>Fremskridt</h2>
+					<progress class="progression" value="0" max="10" >
+				</div>
+			</div>
+			<!-- Résults -->
+			<div class="body resultGood">
+				<div class="content">
+					<center><p class="bold-text">Godt arbejde !</p><br><br>Du gjorde ret godt under testen!<br><br>Du kan nu lukke dette vindue og fortsætte med at tage køreprøven.</center>
+				</div>
+				<div class="buttonspot">
+				<a href="#" class="button btnClose">Luk</a>
+				</div>
+				<div class ="barre-progression" >
+					<h2>Fremskridt</h2>
+					<progress class="progression" value="10" max="10" >
+				</div>
+			</div>
+			<div class="body resultBad">
+				<div class="content">
+					<center><p class="bold-text">Du fejlede</p><br><br>Du klarede ikke denne test, prøv igen en anden gang...<br><br></center>
+				</div>
+				<div class="buttonspot">
+				<a href="#" class="button btnKick">Luk</a>
+				</div>
+				<div class ="barre-progression" >
+					<h2>Fremskridt</h2>
+					<progress class="progression" value="10" max="10" >
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+
+
+					
